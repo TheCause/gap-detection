@@ -1,0 +1,236 @@
+{
+  "dataset": "mnist",
+  "design": "paired: same full model per seed, same persistence seed",
+  "results": [
+    {
+      "seed": 42,
+      "condition": "minus_7",
+      "excluded": [
+        7
+      ],
+      "fraction": 0.9,
+      "W_H1_random": 53.50534384441981,
+      "W_H1_categorical": 120.497833868114,
+      "W_H0_random": 69.46806291505169,
+      "W_H0_categorical": 301.2272292513956,
+      "delta_H1": 66.99249002369419,
+      "delta_H0": 231.75916633634392
+    },
+    {
+      "seed": 42,
+      "condition": "minus_3_7",
+      "excluded": [
+        3,
+        7
+      ],
+      "fraction": 0.8,
+      "W_H1_random": 83.49742603087665,
+      "W_H1_categorical": 203.81271220189143,
+      "W_H0_random": 192.92775467038155,
+      "W_H0_categorical": 605.196752439663,
+      "delta_H1": 120.31528617101478,
+      "delta_H0": 412.26899776928144
+    },
+    {
+      "seed": 42,
+      "condition": "minus_2_4",
+      "excluded": [
+        2,
+        4
+      ],
+      "fraction": 0.8,
+      "W_H1_random": 51.80869136056652,
+      "W_H1_categorical": 167.18893853053044,
+      "W_H0_random": 64.46348449587822,
+      "W_H0_categorical": 439.6274137820667,
+      "delta_H1": 115.38024716996392,
+      "delta_H0": 375.1639292861885
+    },
+    {
+      "seed": 42,
+      "condition": "minus_4_9",
+      "excluded": [
+        4,
+        9
+      ],
+      "fraction": 0.8,
+      "W_H1_random": 58.48461506946473,
+      "W_H1_categorical": 161.6922658659687,
+      "W_H0_random": 74.13949810097404,
+      "W_H0_categorical": 501.6039296791167,
+      "delta_H1": 103.20765079650397,
+      "delta_H0": 427.46443157814264
+    },
+    {
+      "seed": 42,
+      "condition": "minus_cluster",
+      "excluded": [
+        3,
+        5,
+        8
+      ],
+      "fraction": 0.7,
+      "W_H1_random": 56.56590139335019,
+      "W_H1_categorical": 125.29707072447157,
+      "W_H0_random": 42.96385034918785,
+      "W_H0_categorical": 384.15228586955766,
+      "delta_H1": 68.73116933112138,
+      "delta_H0": 341.1884355203698
+    },
+    {
+      "seed": 123,
+      "condition": "minus_7",
+      "excluded": [
+        7
+      ],
+      "fraction": 0.9,
+      "W_H1_random": 48.62054868024635,
+      "W_H1_categorical": 133.91856562144451,
+      "W_H0_random": 32.438347071409225,
+      "W_H0_categorical": 318.5935377526352,
+      "delta_H1": 85.29801694119817,
+      "delta_H0": 286.155190681226
+    },
+    {
+      "seed": 123,
+      "condition": "minus_3_7",
+      "excluded": [
+        3,
+        7
+      ],
+      "fraction": 0.8,
+      "W_H1_random": 109.48779340569794,
+      "W_H1_categorical": 63.029191958947756,
+      "W_H0_random": 251.40663566651082,
+      "W_H0_categorical": 78.06623613834381,
+      "delta_H1": -46.45860144675019,
+      "delta_H0": -173.340399528167
+    },
+    {
+      "seed": 123,
+      "condition": "minus_2_4",
+      "excluded": [
+        2,
+        4
+      ],
+      "fraction": 0.8,
+      "W_H1_random": 45.26965579808375,
+      "W_H1_categorical": 79.19560531412914,
+      "W_H0_random": 25.621158629655838,
+      "W_H0_categorical": 120.39251390099525,
+      "delta_H1": 33.92594951604539,
+      "delta_H0": 94.77135527133942
+    },
+    {
+      "seed": 123,
+      "condition": "minus_4_9",
+      "excluded": [
+        4,
+        9
+      ],
+      "fraction": 0.8,
+      "W_H1_random": 94.03270926354227,
+      "W_H1_categorical": 102.61671161546528,
+      "W_H0_random": 236.61523594820602,
+      "W_H0_categorical": 244.85987996092265,
+      "delta_H1": 8.584002351923004,
+      "delta_H0": 8.244644012716634
+    },
+    {
+      "seed": 123,
+      "condition": "minus_cluster",
+      "excluded": [
+        3,
+        5,
+        8
+      ],
+      "fraction": 0.7,
+      "W_H1_random": 81.2709602629639,
+      "W_H1_categorical": 71.6155077931506,
+      "W_H0_random": 253.76022189489652,
+      "W_H0_categorical": 78.54179507493973,
+      "delta_H1": -9.655452469813298,
+      "delta_H0": -175.2184268199568
+    },
+    {
+      "seed": 456,
+      "condition": "minus_7",
+      "excluded": [
+        7
+      ],
+      "fraction": 0.9,
+      "W_H1_random": 92.8527031508729,
+      "W_H1_categorical": 90.34376571516678,
+      "W_H0_random": 220.7739990055561,
+      "W_H0_categorical": 265.30668574084984,
+      "delta_H1": -2.508937435706116,
+      "delta_H0": 44.53268673529374
+    },
+    {
+      "seed": 456,
+      "condition": "minus_3_7",
+      "excluded": [
+        3,
+        7
+      ],
+      "fraction": 0.8,
+      "W_H1_random": 85.77654976692955,
+      "W_H1_categorical": 168.37560436654582,
+      "W_H0_random": 213.9383766428611,
+      "W_H0_categorical": 455.66782162179703,
+      "delta_H1": 82.59905459961627,
+      "delta_H0": 241.72944497893593
+    },
+    {
+      "seed": 456,
+      "condition": "minus_2_4",
+      "excluded": [
+        2,
+        4
+      ],
+      "fraction": 0.8,
+      "W_H1_random": 51.36438455280581,
+      "W_H1_categorical": 69.04252361851833,
+      "W_H0_random": 40.69522112607956,
+      "W_H0_categorical": 70.4212563931942,
+      "delta_H1": 17.67813906571252,
+      "delta_H0": 29.72603526711464
+    },
+    {
+      "seed": 456,
+      "condition": "minus_4_9",
+      "excluded": [
+        4,
+        9
+      ],
+      "fraction": 0.8,
+      "W_H1_random": 169.4595143347875,
+      "W_H1_categorical": 97.95103015589481,
+      "W_H0_random": 494.4391066526539,
+      "W_H0_categorical": 242.256090231166,
+      "delta_H1": -71.5084841788927,
+      "delta_H0": -252.18301642148788
+    },
+    {
+      "seed": 456,
+      "condition": "minus_cluster",
+      "excluded": [
+        3,
+        5,
+        8
+      ],
+      "fraction": 0.7,
+      "W_H1_random": 55.928758034506934,
+      "W_H1_categorical": 76.08327455460982,
+      "W_H0_random": 51.70609308117469,
+      "W_H0_categorical": 191.13667143476684,
+      "delta_H1": 20.15451652010288,
+      "delta_H0": 139.43057835359215
+    }
+  ],
+  "summary": {
+    "n_positive_delta": 11,
+    "n_total_pairs": 15
+  },
+  "timing_s": 3996.7805712223053
+}
