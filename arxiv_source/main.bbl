@@ -1,0 +1,54 @@
+\begin{thebibliography}{9}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Burns and Fukai(2023)]{burns2023simplicial}
+Thomas Burns and Tomoki Fukai.
+\newblock Simplicial hopfield networks.
+\newblock In \emph{International Conference on Learning Representations}, 2023.
+
+\bibitem[Carlsson(2009)]{carlsson2009topology}
+Gunnar Carlsson.
+\newblock Topology and data.
+\newblock \emph{Bulletin of the American Mathematical Society}, 46\penalty0 (2):\penalty0 255--308, 2009.
+
+\bibitem[Cohen-Steiner et~al.(2007)Cohen-Steiner, Edelsbrunner, and Harer]{cohen2007stability}
+David Cohen-Steiner, Herbert Edelsbrunner, and John Harer.
+\newblock Stability of persistence diagrams.
+\newblock \emph{Discrete \& Computational Geometry}, 37\penalty0 (1):\penalty0 103--120, 2007.
+
+\bibitem[Dai and Wipf(2019)]{dai2019diagnosing}
+Bin Dai and David Wipf.
+\newblock Diagnosing and enhancing {VAE} models.
+\newblock In \emph{International Conference on Learning Representations}, 2019.
+
+\bibitem[Edelsbrunner and Harer(2010)]{edelsbrunner2010computational}
+Herbert Edelsbrunner and John~L Harer.
+\newblock \emph{Computational Topology: An Introduction}.
+\newblock American Mathematical Society, 2010.
+
+\bibitem[Higgins et~al.(2017)Higgins, Matthey, Pal, Burgess, Glorot, Botvinick, Mohamed, and Lerchner]{higgins2017betavae}
+Irina Higgins, Loic Matthey, Arka Pal, Christopher Burgess, Xavier Glorot, Matthew Botvinick, Shakir Mohamed, and Alexander Lerchner.
+\newblock $\beta$-{VAE}: Learning basic visual concepts with a constrained variational framework.
+\newblock In \emph{International Conference on Learning Representations}, 2017.
+
+\bibitem[Kingma and Welling(2014)]{kingma2014auto}
+Diederik~P Kingma and Max Welling.
+\newblock Auto-encoding variational {B}ayes.
+\newblock In \emph{International Conference on Learning Representations}, 2014.
+
+\bibitem[Ramsauer et~al.(2021)Ramsauer, Sch{\"a}fl, Lehner, Seidl, Widrich, Adler, Gruber, Holzleitner, Pavlovi{\'c}, Sandve, Greiff, Kreil, Kopp, Klambauer, Brandstetter, and Hochreiter]{ramsauer2020hopfield}
+Hubert Ramsauer, Bernhard Sch{\"a}fl, Johannes Lehner, Philipp Seidl, Michael Widrich, Thomas Adler, Lukas Gruber, Markus Holzleitner, Milena Pavlovi{\'c}, Geir~Kjetil Sandve, Victor Greiff, David Kreil, Michael Kopp, G{\"u}nter Klambauer, Johannes Brandstetter, and Sepp Hochreiter.
+\newblock Hopfield networks is all you need.
+\newblock In \emph{International Conference on Learning Representations}, 2021.
+
+\bibitem[Rigaud(2026)]{rigaud2026gap}
+R{\'e}gis Rigaud.
+\newblock Topological gaps exist before learning and are amplified by regularization.
+\newblock \emph{Zenodo}, 2026.
+\newblock \doi{10.5281/zenodo.19309874}.
+
+\end{thebibliography}

@@ -1,0 +1,200 @@
+{
+  "analysis": "P1 per-seed Spearman analysis",
+  "artifact_status": "archived_v1_protocol_outputs",
+  "note": "Latent files are archived outputs produced under the V1 experimental protocol. Seeds marked in_v1_published were included in the published ghost_aspiration.json; the others are additional archived seeds generated under the same V1 setup.",
+  "latents_dir_vae": "/Users/regis/dev/epistemologue/output/experiment/latents",
+  "latents_dir_ae": "/Users/regis/dev/epistemologue/output/experiment/ae_latents",
+  "v1_published_seeds": [
+    42,
+    123,
+    456
+  ],
+  "results": {
+    "VAE": {
+      "detected_seeds": [
+        42,
+        123,
+        456,
+        789,
+        1024
+      ],
+      "per_seed": [
+        {
+          "seed": 42,
+          "in_v1_published": true,
+          "n": 78,
+          "spearman_rho": -0.31337650118709526,
+          "spearman_p": 0.00521050248152903,
+          "pearson_r": -0.31941396423343277,
+          "pearson_p": 0.004364768009464578,
+          "mean_alpha": 0.005899398904327894,
+          "frac_aspirated": 0.6025641025641025
+        },
+        {
+          "seed": 123,
+          "in_v1_published": true,
+          "n": 78,
+          "spearman_rho": -0.3565288666769496,
+          "spearman_p": 0.001355672454096748,
+          "pearson_r": -0.3695400602395379,
+          "pearson_p": 0.0008694161968725913,
+          "mean_alpha": 0.006747195870792702,
+          "frac_aspirated": 0.6025641025641025
+        },
+        {
+          "seed": 456,
+          "in_v1_published": true,
+          "n": 78,
+          "spearman_rho": -0.06780905277795933,
+          "spearman_p": 0.5552683865550083,
+          "pearson_r": -0.04416409543128506,
+          "pearson_p": 0.7010252827974377,
+          "mean_alpha": 0.004859609073286872,
+          "frac_aspirated": 0.5512820512820513
+        },
+        {
+          "seed": 789,
+          "in_v1_published": false,
+          "n": 78,
+          "spearman_rho": -0.31113728433230076,
+          "spearman_p": 0.0055592683030738785,
+          "pearson_r": -0.2958829757183413,
+          "pearson_p": 0.008534708684619332,
+          "mean_alpha": 0.00581308280315136,
+          "frac_aspirated": 0.5384615384615384
+        },
+        {
+          "seed": 1024,
+          "in_v1_published": false,
+          "n": 78,
+          "spearman_rho": -0.13389757735110477,
+          "spearman_p": 0.2425122134303156,
+          "pearson_r": -0.26876324483870906,
+          "pearson_p": 0.017346227660014372,
+          "mean_alpha": 0.004130033195981616,
+          "frac_aspirated": 0.47435897435897434
+        }
+      ],
+      "aggregate_all_seeds": {
+        "rho_mean": -0.23654985646508195,
+        "rho_std": 0.11390481101584726,
+        "n_negative": 5,
+        "n_seeds": 5
+      },
+      "aggregate_v1_seeds": {
+        "rho_mean": -0.24590480688066807,
+        "rho_std": 0.1271589684447565,
+        "n_negative": 3,
+        "n_seeds": 3
+      },
+      "global_all": {
+        "rho": -0.253091573777376,
+        "p": 4.088099495768083e-07,
+        "n_points": 390,
+        "bootstrap_point_mean": -0.25457923497635626,
+        "bootstrap_point_std": 0.05121000303322189
+      },
+      "global_v1": {
+        "rho": -0.25390469809461136,
+        "p": 8.574227010121171e-05,
+        "n_points": 234,
+        "bootstrap_point_mean": -0.25431409205832917,
+        "bootstrap_point_std": 0.06393384353245052
+      },
+      "verdict_v1_published": "PASS",
+      "verdict_all_seeds": "PASS"
+    },
+    "AE": {
+      "detected_seeds": [
+        42,
+        123,
+        456,
+        789,
+        1024
+      ],
+      "per_seed": [
+        {
+          "seed": 42,
+          "in_v1_published": true,
+          "n": 78,
+          "spearman_rho": -0.24040586379469428,
+          "spearman_p": 0.0339952827740181,
+          "pearson_r": -0.18614217268681432,
+          "pearson_p": 0.10273925252256055,
+          "mean_alpha": 0.0023638492687030224,
+          "frac_aspirated": 0.5512820512820513
+        },
+        {
+          "seed": 123,
+          "in_v1_published": true,
+          "n": 78,
+          "spearman_rho": -0.08156062747378803,
+          "spearman_p": 0.4777796578618274,
+          "pearson_r": -0.10063214393310468,
+          "pearson_p": 0.380683222211801,
+          "mean_alpha": 0.003571260180630912,
+          "frac_aspirated": 0.5769230769230769
+        },
+        {
+          "seed": 456,
+          "in_v1_published": true,
+          "n": 78,
+          "spearman_rho": 0.22341564777215708,
+          "spearman_p": 0.049272438573617745,
+          "pearson_r": 0.17010697992848572,
+          "pearson_p": 0.13649687534021251,
+          "mean_alpha": 0.000542483135610797,
+          "frac_aspirated": 0.4230769230769231
+        },
+        {
+          "seed": 789,
+          "in_v1_published": false,
+          "n": 78,
+          "spearman_rho": 0.09484411729036589,
+          "spearman_p": 0.4088148637144896,
+          "pearson_r": 0.1242963428291828,
+          "pearson_p": 0.2782569129706492,
+          "mean_alpha": 0.0011061506735848053,
+          "frac_aspirated": 0.48717948717948717
+        },
+        {
+          "seed": 1024,
+          "in_v1_published": false,
+          "n": 78,
+          "spearman_rho": 0.05924436458193723,
+          "spearman_p": 0.606387166453796,
+          "pearson_r": 0.09000766067894687,
+          "pearson_p": 0.43322525047359395,
+          "mean_alpha": 0.001304596756438264,
+          "frac_aspirated": 0.5512820512820513
+        }
+      ],
+      "aggregate_all_seeds": {
+        "rho_mean": 0.011107527675195577,
+        "rho_std": 0.1589025376979699,
+        "n_negative": 2,
+        "n_seeds": 5
+      },
+      "aggregate_v1_seeds": {
+        "rho_mean": -0.032850281165441746,
+        "rho_std": 0.1924614628545136,
+        "n_negative": 2,
+        "n_seeds": 3
+      },
+      "global_all": {
+        "rho": 0.014236818902604179,
+        "p": 0.7792731405195619,
+        "n_points": 390,
+        "bootstrap_point_mean": 0.015750692028378473,
+        "bootstrap_point_std": 0.05021332123929856
+      },
+      "global_v1": {
+        "rho": -0.017439808911979045,
+        "p": 0.7907249432767081,
+        "n_points": 234,
+        "bootstrap_point_mean": -0.015491338054037285,
+        "bootstrap_point_std": 0.06408373412996145
+      }
+    }
+  }
+}

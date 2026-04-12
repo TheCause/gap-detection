@@ -1,98 +1,73 @@
-# Topological Gaps Exist Before Learning and Are Amplified by Regularization
+# Missing Attractors — Gap Detection V2
 
-## Reproducibility Code
+Code and artifacts for **"Missing Attractors: An Energy-Landscape View of Detectable Topological Scars"**.
 
-This directory contains standalone Python code to reproduce all experiments from the paper.
+This is the V2 paper. For V1 (Zenodo DOI `10.5281/zenodo.19309874`, "Topological Gaps Exist Before Learning and Are Amplified by Regularization"), see the [`main`](https://github.com/TheCause/gap-detection/tree/main) branch of this repository (tag [`v1-zenodo`](https://github.com/TheCause/gap-detection/releases/tag/v1-zenodo)).
 
-### Requirements
+V2 **does not replace** V1. It is a distinct theoretical contribution that:
+
+1. Formalises the aggregated posterior of a VAE as a GMM whose energy has the form of a Modern Hopfield attractor landscape.
+2. Derives three falsifiable predictions (aspiration monotonicity, β-optimal, persistence growth).
+3. Re-analyses V1 archived latents per-seed (P1 Spearman, P2 resolvability) to validate those predictions.
+
+## Contents
+
+```
+.
+├── README.md                  — this file
+├── ABSTRACT.txt               — paper abstract
+├── LICENSE                    — CC-BY-4.0
+├── requirements.txt           — Python dependencies
+├── toy_model.py               — 2D GMM toy model (Figures 1–2)
+├── perseed_spearman_p1.py     — P1 reanalysis: Spearman monotonicity per seed
+├── p2_resolvability_score.py  — P2 reanalysis: resolvability score per seed
+├── search_beta_latents.py     — helper: locate β-sweep latents in V1 artifacts
+├── search_gap_latents.py      — helper: locate ablation latents in V1 artifacts
+├── results/
+│   ├── p1_perseed_results.json       — pre-computed P1 results
+│   └── p2_resolvability_results.json — pre-computed P2 results
+├── arxiv_source/              — LaTeX sources (main.tex, bib, figures, compiled PDF)
+└── docs/                      — design notes, theory propositions, audits
+    ├── theory_propositions.md
+    ├── theory_section3_0.md
+    ├── predictions_falsifiables.md
+    ├── claim_audit.md
+    ├── p2_metric_definition.md
+    └── STRUCTURE.md
+```
+
+## Reproducing Figures
 
 ```bash
 pip install -r requirements.txt
+python toy_model.py
 ```
 
-Python 3.10+ recommended. MNIST and Fashion-MNIST are downloaded automatically on first run.
+Outputs:
+- `figures/toy_model_energy.png` — energy landscape before/after ablation (Figure 1)
+- `figures/toy_model_aspiration.png` — aspiration vs distance to ghost centroid (Figure 2)
 
-### Files
+## Reproducing Empirical Results (P1, P2)
 
-| File | Description |
-|------|-------------|
-| `config.py` | Experiment configuration (architecture, conditions, paths) |
-| `utils.py` | Shared utilities (device, datasets, training, latents, centroids, Procrustes) |
-| `vae.py` | Convolutional VAE model |
-| `ae.py` | Deterministic autoencoder model |
-| `train.py` | VAE training loop and latent extraction |
-| `tda.py` | Persistent homology (Ripser) and Wasserstein distances |
-| `compare.py` | Bootstrap statistical comparison |
-| `visualize.py` | Figure generation |
-| `run_experiment.py` | Main VAE experiment (MNIST, 6 conditions x 5 seeds) |
-| `run_fashion_mnist.py` | Fashion-MNIST replication (6 conditions x 3 seeds) |
-| `run_ae_experiment.py` | AE experiment with normalization |
-| `pca_baseline.py` | PCA baseline (no learning) |
-| `beta_sweep.py` | Beta dose-response experiment (6 beta values) |
-| `ood_recon_baseline.py` | OOD reconstruction error baseline (MSE vs TDA) |
-| `random_ablation_control.py` | Paired random vs categorical ablation control |
-| `ghost_centroid_analysis.py` | Aspiration mechanism analysis |
-| `knn_overlap.py` | k-NN overlap in pixel space |
-| `knn_overlap_latent.py` | k-NN overlap in latent space |
-| `mndc.py` | Mean Nearest-neighbor Distance to Complement |
-| `run_gci_test.py` | GCI stress test conditions |
-| `expansion_test.py` | Compensatory expansion analysis |
-| `geometry_preservation.py` | Geometry preservation test |
-| `normalization_check.py` | AE normalization validation |
+The empirical results re-use V1 archived latents (see Zenodo DOI above). Pre-computed
+per-seed results are in `results/`:
 
-### Pre-computed results
+- `p1_perseed_results.json` — output of `perseed_spearman_p1.py`
+- `p2_resolvability_results.json` — output of `p2_resolvability_score.py`
 
-The `results/` directory contains JSON files with all experimental results:
-
-| File | Description |
-|------|-------------|
-| `ood_recon_baseline_mnist.json` | OOD MSE baseline (MNIST, 3 seeds) |
-| `ood_recon_baseline_fashion.json` | OOD MSE baseline (Fashion-MNIST, 3 seeds) |
-| `fashion_mnist_tda.json` | Fashion-MNIST TDA results (3 seeds, B=100) |
-| `beta_sweep.json` | Beta sweep results (6 values, B=100) |
-
-### Running experiments
+To re-run from V1 latents:
 
 ```bash
-# Core VAE experiment — MNIST (~30 min on GPU, ~2h on CPU)
-python run_experiment.py
-
-# Fashion-MNIST replication (~30 min on GPU)
-python run_fashion_mnist.py
-
-# AE experiment (~30 min on GPU)
-python run_ae_experiment.py
-
-# PCA baseline (~5 min, CPU only)
-python pca_baseline.py
-
-# Beta sweep (~6h on GPU)
-python beta_sweep.py
-
-# OOD reconstruction baseline (MNIST then Fashion-MNIST)
-python ood_recon_baseline.py mnist
-python ood_recon_baseline.py fashion_mnist
-
-# Ghost centroid analysis (requires trained models)
-python ghost_centroid_analysis.py
-
-# Individual analyses
-python knn_overlap.py
-python mndc.py
-python expansion_test.py
-python geometry_preservation.py
+# After retrieving V1 latents from Zenodo and locating them with the search_*.py helpers:
+python perseed_spearman_p1.py
+python p2_resolvability_score.py
 ```
 
-### Seeds
+## Hardware
 
-All experiments use fixed seeds {42, 123, 456, 789, 1024} for VAE/AE (5 seeds for MNIST, 3 seeds for Fashion-MNIST and OOD baseline) and random_state=42 for PCA.
+- Toy model: any machine with Python 3.8+.
+- Empirical re-analysis (P1, P2): Apple M4 (CPU).
 
-### Hardware
-
-- **MNIST main experiments**: Apple M4 (MPS backend, 32 GB)
-- **Fashion-MNIST, beta sweep, OOD baseline**: NVIDIA RTX 3090 (CUDA, 24 GB)
-- CPU execution is supported but slower.
-
-### License
+## License
 
 CC-BY-4.0

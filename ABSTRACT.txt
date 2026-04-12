@@ -1,0 +1,10 @@
+Title: Missing Attractors: An Energy-Landscape View of Detectable Topological Scars
+
+Authors: Regis Rigaud (Independent Researcher)
+
+Abstract:
+Missing training categories leave structural traces in learned representations, but the mechanisms underlying their detectability remain poorly understood. We formalize the aggregated posterior of a variational autoencoder trained on K separable classes as approximately a K-component Gaussian mixture whose negative log-density defines an energy landscape functionally equivalent to Modern Hopfield energy. Removing a class removes an attractor, producing predictable deformations that we characterize through a proposition (directed aspiration) and a numerical corollary (topological scar creation) in the analytical mixture setting. Most informatively, a pre-registered geometric proxy based on surviving-class resolvability fails to predict the topological detection optimum (1 PASS, 1 MARGINAL, 1 FAIL across three ablation conditions), suggesting that the scar geometry is not reducible to cluster compactness. Empirically, we observe a consistent monotonic aspiration signal across five seeds (rho = -0.25, p < 10^-4), absent in autoencoder controls. Topological persistence increases with gap size in the expected order, though significance remains borderline (rho = 0.35, p ~ 0.08). These results suggest that missing attractors induce a proper geometric object -- the topological scar -- whose structure requires void-centered rather than survivor-centered analysis.
+
+Keywords: topological data analysis, persistent homology, variational autoencoder, energy landscape, Hopfield networks, gap detection, topological scar, latent space geometry
+
+License: CC-BY-4.0
